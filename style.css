@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef3f9;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ), url("images/flood1.jpg") center/cover no-repeat;
+
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #e53935;
+    color: white;
+    padding: 14px 34px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* FLOOD INFO SECTION */
+.incident {
+    background: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.incident h2 {
+    color: #1565c0;
+}
+
+/* IMAGE GALLERY */
+.gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.card {
+    width: 350px;
+    height: 320px;              /* FIXED CARD HEIGHT */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;     /* IMPORTANT */
+}
+
+/* FIXED IMAGE SIZE */
+.img-box {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* AUTO CROP, NO STRETCH */
+    display: block;
+}
+
+.card p {
+    height: 100px;              /* FIX SPACE FOR TEXT */
+    margin: 0;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CENTER FULL PAGE */
+.form-body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* FORM BOX */
+.form-container {
+    width: 350px;
+    padding: 40px;
+
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* TITLE */
+.form-container h1 {
+    margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.subtitle {
+    margin-bottom: 25px;
+    color: gray;
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* INPUT */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+/* LABEL */
+.input-group label {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* BUTTON */
+.btn-donate {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #ff4d4d;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* HOVER */
+.btn-donate:hover {
+    background: #cc0000;
+}
+
+/* SUCCESS PAGE */
+.success-body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    font-family: Arial, sans-serif;
+}
+
+.success-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    width: 400px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.success-box h1 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.success-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+
+    background: #ff4d4d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    background: #cc0000;
+}
+
+.incident p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.qr-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qr-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.qr-img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* QR SECTION */
+.qr-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.qr-img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+/* SUCCESS PAGE */
+.success-body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.success-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.success-text {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
+/* CONTENT SECTION */
+.content {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 42px;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #444;
+    max-width: 1100px;
+    margin: auto;
+}
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}

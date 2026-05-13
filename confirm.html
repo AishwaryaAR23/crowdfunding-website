@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donation Successful</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="success-body">
+
+<div class="success-box">
+
+    <h1>🎉 Thank You for Your Support!</h1>
+
+    <p class="success-text">
+        Dear <b id="name"></b>, 😊 <br><br>
+
+        Thank you for donating ₹<b><span id="amount"></span></b> ❤️ <br>
+
+        Your contribution will help flood victims rebuild their lives.
+    </p>
+
+    <!-- ✅ ADD HERE -->
+    <p><b>Total Donations So Far: ₹<span id="total"></span></b></p>
+    <ul id="donorList"></ul>
+
+    <a href="index.html" class="back-btn">🏠 Back to Home</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("username");
+const amount = parseInt(params.get("amount"));
+
+// Show current donation
+document.getElementById("name").textContent = name;
+document.getElementById("amount").textContent = amount;
+
+// 🔥 GET OLD DATA
+let donations = JSON.parse(localStorage.getItem("donations")) || [];
+
+// 🔥 ADD NEW DONATION
+donations.push({
+    name: name,
+    amount: amount
+});
+
+// 🔥 SAVE BACK
+localStorage.setItem("donations", JSON.stringify(donations));
+
+// 🔥 CALCULATE TOTAL
+let total = 0;
+donations.forEach(d => total += d.amount);
+
+// 🔥 SHOW TOTAL
+document.getElementById("total").textContent = total;
+let list = document.getElementById("donorList");
+
+donations.forEach(d => {
+    let li = document.createElement("li");
+    li.textContent = d.name + " donated ₹" + d.amount;
+    list.appendChild(li);
+});
+</script>

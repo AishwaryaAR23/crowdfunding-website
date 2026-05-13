@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="form-body">
+
+<div class="form-container">
+
+    <h1>Donate for Flood Relief</h1>
+    <p class="subtitle">Your support can save lives ❤️</p>
+
+    <form action="confirm.html" method="GET">
+
+        <!-- FULL NAME -->
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" name="username" required>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <!-- AMOUNT -->
+        <div class="input-group">
+            <label>Donation Amount (₹)</label>
+            <input type="number" name="amount" required>
+        </div>
+
+        <!-- QR CODE -->
+        <div class="qr-section">
+            <p><b>Scan & Donate using UPI</b></p>
+            <img src="images/qr.png" alt="QR Code" class="qr-img">
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit" class="btn-donate" onclick="return confirmPayment()">
+            Donate Now
+        </button>
+
+    </form>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function confirmPayment() {
+    let amount = document.getElementsByName("amount")[0].value;
+
+    if (amount.trim() === "") {
+        alert("Enter amount first");
+        return false;
+    }
+
+    alert("After payment, click OK to continue");
+    return true;
+}
+</script>
+
+</body>
+</html>
